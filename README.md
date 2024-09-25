@@ -5,12 +5,9 @@ This project implements a reminder application that can handle multiple reminder
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Usage](#usage)
 - [Code Structure](#code-structure)
 - [Functions](#functions)
 - [Makefile](#makefile)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -23,7 +20,57 @@ The Concurrent Client-Server Reminder Application allows users to set reminders 
 - Concurrent handling of multiple reminders through process forking.
 - Input validation to ensure correct format for intervals.
 
-## Usage
+## Code Structure
+Code Structure
+The application consists of multiple source files, each handling specific functionalities:
+
+main.c: Main program that orchestrates reminder setting and process management.
+numchecker.c: Validates if the input strings are numbers.
+printreminder.c: Prints the reminder message.
+setsleepinterval.c: Parses the input to set sleep intervals.
+
+## Functions
+This section outlines the key functions implemented in the Concurrent Client-Server Reminder Application, along with their descriptions and parameters.
+
+### numchecker
+
+```c
+bool numchecker(char *numstr);
+Description
+Validates if the input string consists only of digits. It checks for negative numbers and returns false if any character is not a digit.
+
+Parameters
+- numstr: A pointer to a character string representing the number to be validated.
+Returns
+- true if the input string is a valid non-negative number.
+- false if the input string contains non-digit characters or is a negative number.
+
+### printreminder
+
+```c
+void printreminder(char *toprint);
+Description
+Prints the reminder message provided to the user. It also re-prompts the user for further input.
+
+Parameters
+- toprint: A pointer to a character string containing the reminder message to be printed.
+
+### setsleepinterval
+
+```c
+int setsleepinterval(char *remindrequest, int **interval);
+Description
+Parses the reminder request input to extract sleep intervals. Allocates memory for the intervals and populates it based on the parsed input.
+
+
+Parameters
+- remindrequest: A pointer to a character string containing the entire reminder request input.
+- interval: A pointer to a pointer of integers, where the extracted sleep intervals will be stored.
+
+Returns
+- The number of sleep intervals extracted from the input.
+
+
 
 ### Command-Line Arguments
 
