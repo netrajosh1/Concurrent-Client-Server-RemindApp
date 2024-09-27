@@ -36,6 +36,8 @@ This section outlines the key functions implemented in the Concurrent Client-Ser
 
 ```c
 bool numchecker(char *numstr);
+```
+
 Description
 Validates if the input string consists only of digits. It checks for negative numbers and returns false if any character is not a digit.
 
@@ -49,6 +51,7 @@ Returns
 
 ```c
 void printreminder(char *toprint);
+```
 
 Description
 Prints the reminder message provided to the user. It also re-prompts the user for further input.
@@ -60,6 +63,7 @@ Parameters
 
 ```c
 int setsleepinterval(char *remindrequest, int **interval);
+```
 Description
 Parses the reminder request input to extract sleep intervals. Allocates memory for the intervals and populates it based on the parsed input.
 
