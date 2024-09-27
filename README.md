@@ -49,6 +49,7 @@ Returns
 
 ```c
 void printreminder(char *toprint);
+
 Description
 Prints the reminder message provided to the user. It also re-prompts the user for further input.
 
