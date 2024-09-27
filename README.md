@@ -32,7 +32,7 @@ setsleepinterval.c: Parses the input to set sleep intervals.
 ## Functions
 This section outlines the key functions implemented in the Concurrent Client-Server Reminder Application, along with their descriptions and parameters.
 
-## numchecker
+### numchecker
 
 ```c
 bool numchecker(char *numstr);
@@ -47,7 +47,7 @@ Returns
 - true if the input string is a valid non-negative number.
 - false if the input string contains non-digit characters or is a negative number.
 
-## printreminder
+### printreminder
 
 ```c
 void printreminder(char *toprint);
@@ -59,7 +59,7 @@ Prints the reminder message provided to the user. It also re-prompts the user fo
 Parameters
 - toprint: A pointer to a character string containing the reminder message to be printed.
 
-## setsleepinterval
+### setsleepinterval
 
 ```c
 int setsleepinterval(char *remindrequest, int **interval);
